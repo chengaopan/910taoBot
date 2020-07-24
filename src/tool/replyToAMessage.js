@@ -16,7 +16,7 @@ module.exports = (msg, length) => {
 			requestUrl = "http://api.7cyd.com/api/vip/sjqh.php";
 			axios.get(requestUrl).then(async (response) => {
 				let result = response.data;
-				resolve(result.data.content);
+				resolve(result.content);
 			});
 		} else if (msg.text() === "图片") {
 			const photo = FileBox.fromFile("img/910tao.jpg");
